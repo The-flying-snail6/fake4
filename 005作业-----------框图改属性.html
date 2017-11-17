@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>005改属性应用</title>
+
+<style>
+*{margin:0;
+  paddiing:0;	
+}
+ul,li{list-style:none;}
+input{border:0}
+.clear{clear:both}
+
+#nav{
+	width:1200px;
+	height:650px;background:#090;
+	margin:0 auto;
+	position:relative;
+}
+#nav h2{
+	display:inline-block;
+	margin:20px 5px 40px 30px;
+	font-size:28px;
+	float:left;
+}
+#aside{
+	width:150px;
+	height:60px;
+	background-color:#F00;
+	border:0;
+	color:#fff;
+	font-size:18px;
+	letter-spacing:3px;
+	float:left;
+	
+}
+#nav .box{
+	width:120px;
+	height:120px;
+	border:5px solid #000;
+	background-color:#FFF;
+	float:left;
+	position:absolute;
+	top:100px;
+	left:30px;
+}
+
+#but{
+	width:500px;
+	height:300px;
+	border:30px solid #666;
+	float:right;
+	margin-top:270px;
+	margin-right:40px;
+    background-color:#fff;
+	display:none;
+}
+
+#but ul{
+	overflow:hidden;
+	 padding:0;
+	 margin-top:10px;
+}
+
+#but ul li:first-child{margin-left:43px;}
+
+
+#but ul li{
+	float:left;
+	margin-left:40px;
+	letter-spacing:1px;
+	margin-top:10px;
+}
+#but ul li input{
+	margin:0 10px 0 10px;
+	width:65px;
+	height:65px;
+	font-size:24px;
+}
+#back1{ background-color:#F00;}
+#back2{ background-color:#FF0;}
+#back3{ background-color:#00F;}
+#back4{ background-color:#006;color:#fff;width:100px;height:40px;margin:20px 0 0 150px;}
+#back5{ background-color:#006;color:#fff;width:100px;height:40px;margin:20px 0 0 30px;}
+</style>
+
+
+
+
+
+<script>
+window.onload=function(){
+	var oAside=document.getElementById('aside');
+	var oBut = document.getElementById('but');
+	var oIpt = document.getElementsByTagName("input");
+	var oBox = document.getElementsByClassName("box");
+	
+	
+	oAside.onclick = function(){
+		oBut.style.display="block";
+	}
+	oIpt[1].onclick = function(){
+		oBox[0].style.backgroundColor="#F00";	
+	}
+	oIpt[2].onclick = function(){
+		oBox[0].style.backgroundColor="#FF0";	
+	}
+	oIpt[3].onclick = function(){
+		oBox[0].style.backgroundColor="#00F";	
+	}
+	oIpt[4].onclick = function(){
+		oBox[0].style.width="200px";	
+	}
+	oIpt[5].onclick = function(){
+		oBox[0].style.width="300px";	
+	}
+	oIpt[6].onclick = function(){
+		oBox[0].style.width="400px";	
+	}
+	oIpt[7].onclick = function(){
+		oBox[0].style.height="200px";	
+	}
+	oIpt[8].onclick = function(){
+		oBox[0].style.height="300px";	
+	}
+	oIpt[9].onclick = function(){
+		oBox[0].style.height="400px";	
+	}
+	oIpt[10].onclick = function(){
+		oBox[0].style.backgroundColor="#fff";
+		oBox[0].style.width="120px";
+		oBox[0].style.height="120px";	
+	}
+	oIpt[11].onclick = function(){
+		oBox[0].style.backgroundColor="#fff";
+		oBox[0].style.width="120px";
+		oBox[0].style.height="120px";
+		oBut.style.display="none";		
+	}
+	
+}
+</script>
+</head>
+
+<body>
+<footer id="nav">
+    <h2>请为下面的DIV设置样式：</h2>
+        <input id="aside" type="button" value="点击设置"/>
+    <div class="box"></div>
+    	
+        
+    <div id="but">
+       <ul>   	
+         <li>请选择背景颜色：<input id="back1" type="button" value="红" style="color:#fff"/><input id="back2" type="button" value="黄" style="color:#fff"/><input id="back3" type="button" value="蓝" style="color:#fff"/></li>
+         <li>请选择边框宽(px):<input type="button" value="200"/><input type="button" value="300"/><input type="button" value="400"/></li>
+         <li>请选择边框高(px):<input type="button" value="200"/><input type="button" value="300"/><input type="button" value="400"/></li>
+       </ul>
+       <div class="clear"></div>
+       <input id="back4" type="button" value="恢复"/>
+       <input id="back5" type="button" value="确定"/>     
+   </div>
+    
+    </footer>
+
+
+
+</body>
+</html>
